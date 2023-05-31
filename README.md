@@ -1,2 +1,2 @@
-# Curso-Pr-ctico-de-Maquetaci-n-en-CSS
+# Curso-Practico-de-Maquetacion-en-CSS
 Curso Práctico de Maquetación en CSS
