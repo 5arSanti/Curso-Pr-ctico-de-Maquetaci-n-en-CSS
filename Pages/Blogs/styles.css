@@ -1,0 +1,179 @@
+:root{
+    --moradoOscuro: #08001C;
+    --moradoClarito: #3E3456;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono", monospace;
+    background-color: #08001C;
+}
+
+p{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    display: inline;
+    color: black;
+}
+
+
+header{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    box-sizing: border-box;
+}
+
+header .headerIconsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 50px;
+    box-sizing: border-box;
+    /* background: rgb(255,0,61);
+    background: linear-gradient(152deg, rgba(255,0,61,1) 0%, rgba(106,0,212,1) 45%); */
+
+}
+header .headerIconsContainer .icons{
+    width: 40%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    margin: 0 20px 0 0;
+}
+header .icons span {
+    color: white;
+    justify-self: end;
+}
+
+
+
+nav{
+    padding: 10px 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+nav .navLogoContainer{
+    margin-left: 50px;
+}
+nav .navLogoContainer a img{
+    height: 90px;
+    object-fit: cover;
+}
+
+nav .profileLink {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 50px 0 0;
+
+}
+nav .profileLink a{
+    color: black;
+    border-bottom: 1px solid white;
+    padding: 0 0 2px 0;
+    color: white;
+}
+
+/* ULTIMO POST */
+.latestPost{
+    width: 100%;
+    height: calc(-150px + 100vh);
+    background: var(--moradoOscuro);
+    background: linear-gradient(152deg, var(--moradoOscuro) 0%, var(--moradoClarito) 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.latestPostInfo{
+    width: 75%;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 0px 47px 25px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 47px 25px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 47px 25px rgba(0,0,0,0.5);
+}
+.latestPostImgContainer{
+    width: 65%;
+    height: 400px;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+}
+.latestPostImgContainer img{
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    transition: .75s ease;
+}
+.latestPostImgContainer img:hover{
+    height: 450px;
+}
+
+
+.latestPostTextAndButton{
+    width: 35%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.latestPostText{
+    width: 100%;
+    height: 400px;
+    color: white;
+    box-sizing: border-box;
+    padding: 30px 10px 10px 30px;
+}
+.latestPostText p{
+    width: 90%;
+    padding-left: 5px;
+}
+.latestPostText p:nth-child(1){
+    font-size: 24px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.latestPostTextAndButton button{
+    height: 50px;
+    background: none;
+    border: none;
+    background-color: white;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+.latestPostTextAndButton button a{
+    opacity: 1;
+    color: black;
+    font-weight: bold;
+    font-family: "Roboto Mono", monospace;
+}
+
+h1{
+    width: 80%;
+    padding: 10px;
+    border-bottom: 1px solid white;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
