@@ -1,3 +1,9 @@
+:root{
+    --moradoOscuro: #08001C;
+    --moradoClarito: #3E3456;
+    --fondoContainer: linear-gradient(100deg, var(--moradoOscuro) 0%, var(--moradoClarito) 95%);
+    --bordesColor: linear-gradient(152deg, rgba(255,0,61,1) 0%, rgba(106,0,212,1) 80%);
+}
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap');
 
 
@@ -119,17 +125,24 @@ nav .profileLink a{
     font-weight: bold;
     font-family: "Roboto mono", monospace;
 }
-.homeMain .infoText button{
+.homeMain .infoText a{
+    display: grid;
+    place-content: center;
+
     width: 20%;
     height: 50px;
-    border-top: 2px solid white;
-    background-color: black;
+    
+    background-color: transparent;
     cursor: pointer;
-}
-.homeMain .infoText button a{
+
     color: white;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: -1px;
     cursor: pointer;
+
+    border-width: 2px;
+    border-style: solid;
+    border-image: var(--bordesColor);
+    border-image-slice: 1;
 }

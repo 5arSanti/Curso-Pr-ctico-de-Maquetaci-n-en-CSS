@@ -1,7 +1,7 @@
 :root{
     --moradoOscuro: #08001C;
     --moradoClarito: #3E3456;
-    --fondoContainer: linear-gradient(100deg, var(--moradoOscuro) 0%, var(--moradoClarito) 95%);
+    --fondoContainer: linear-gradient(150deg, var(--moradoOscuro) 0%, var(--moradoClarito) 95%);
     --bordesColor: linear-gradient(152deg, rgba(255,0,61,1) 0%, rgba(106,0,212,1) 80%);
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap');
@@ -12,7 +12,9 @@ body{
     font-family: "Roboto Mono", monospace;
     background-color: #08001C;
 }
-
+figure{
+    margin: 0;
+}
 p{
     margin: 0;
 }
@@ -27,15 +29,18 @@ h1{
     padding: 10px;
     border-bottom: 1px solid white;
     font-size: 24px;
-    text-align: center;
+    text-align: left;
     color: white;
 }
+
 .shadowBox{
     -webkit-box-shadow: 0px 0px 47px 25px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 47px 25px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 47px 25px rgba(0,0,0,0.5);
 }
-
+.z-2{
+    z-index: 2;
+}
 
 
 /* Header */
@@ -105,168 +110,76 @@ nav .profileLink a{
 
 
 
-/* ULTIMO POST */
-.latestPost{
+
+/* About Me */
+.aboutMeContainer{
     width: 100%;
-    height: calc(-150px + 100vh);
-    background: var(--moradoOscuro);
-    background: var(--fondoContainer);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    box-sizing: border-box;
-}
-.latestPostInfo{
-    width: 75%;
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-}
-.latestPostImgContainer{
-    width: 65%;
-    height: 425px;
-    overflow: hidden;
+    height: calc(100vh - 150px);
+
+    background: url(https://th.bing.com/th/id/R.03319c339d6f82fc283779a68bc9ef92?rik=rkQsdQN0WVwDSg&riu=http%3a%2f%2fd5qsyj6vaeh11.cloudfront.net%2fimages%2fdestinations%2fbackgrounds%2fd311_l_bg_1280x768.jpg&ehk=cOrIiwEdQSARD8GZPeJEkeUKBBqtCXLNnCoT0qwS2p4%3d&risl=&pid=ImgRaw&r=0);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     display: grid;
     place-content: center;
 }
-.latestPostImgContainer img{
-    height: 450px;
-    object-fit: cover;
-    object-position: center;
-    transition: .75s ease;
-}
-.latestPostImgContainer img:hover{
-    height: 450px;
-}
-
-
-.latestPostTextAndButton{
-    width: 35%;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.latestPostText{
+.gradientFigure{
     width: 100%;
-    height: 400px;
-    color: white;
-    box-sizing: border-box;
-    padding: 30px 10px 10px 30px;
-}
-.latestPostText p{
-    width: 90%;
-    padding-left: 5px;
-}
-.latestPostText p:nth-child(1){
-    font-size: 24px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid white;
-}
-.latestPostTextAndButton a{
-    display: grid;
-    place-content: center;
+    height: calc(100vh - 150px);
+    z-index: 1;
+    position: absolute;
+    top: 150px;
+    margin: 0;
 
-    height: 50px;
-    border-top: 1px solid white;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+}
+
+.aboutMeInfoContainer{
+    width: 100%;
+    height: calc(100vh - 150px);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+.logoContainer{
     background-color: transparent;
-    color: white;
-    cursor: pointer;
-
-    font-weight: bold;
-    font-family: "Roboto Mono", monospace;
-}
-.latestPostTextAndButton a:hover{
-    border-top: 1px solid white;
-    background-color: white;
-    color: black;
-}
-
-
-
-
-/* Blogs */
-.allBlogsContainer{
-    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background: var(--fondoContainer);
-    padding-bottom: 30px;
-}
-.blogsGrid{
-    width: 85%;
-    place-content: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 350px);
-    gap: 20px;
-}
-.blogCard{
-    width: 100%;
-    height: 500px;
-    padding-bottom: 15px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    overflow: hidden;
-    border-radius: 10px;
-
-    box-shadow: 10px 10px 30px -7px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 10px 10px 30px -7px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 30px -7px rgba(0,0,0,0.75);
-}
-.blogCard img{
-    width: 100%;
-    height: 45%;
-    object-fit: cover;
-    display: flex;
     justify-content: center;
-    transition: .75s ease;
-}
-.blogCard img:hover{
-    width: 120%;
-}
-.postTitle{
-    font-size: 18px;
-    font-weight: bold;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 
-    width: 90%;
-    margin: 5px 0 5px 0;
-    padding-bottom: 5px;
-    padding-left: 5px;
-    border-bottom: 1px solid white;
 }
-.postInfoDetails{
+.logoContainer img{
+    height: calc(100vh - 190px);
+    object-fit: cover;
+}
+.aboutMeInfo{
     width: 90%;
+}
+.aboutMeInfo h1{
+    width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+.aboutMeInfo h1 a{
+    text-decoration: underline;
+}
+.aboutMeInfo p{
     padding: 0 5px 0 5px;
+    color: white;
     text-align: justify;
+    font-size: 16px;
 }
-.blogCard button{
-    margin-top: 20px;
-    width: 50%;
-    height: 40px;
 
-    border-width: 1px;
-    border-style: solid;
-    border-image: var(--bordesColor);
-    border-image-slice: 1;
 
-    background: transparent;
-    color: white;
-    cursor: pointer;
-    transition: .75s ease;
-}
-.blogCard button a{
-    color: white;
-    font-weight: bold;
-    font-family: "Roboto Mono", monospace;
-}
+
+
 
 
 
@@ -313,36 +226,43 @@ footer{
 
 
 
+
+
 @media(max-width:910px){
-    .latestPostInfo{
-        width: 90%;
+    /* About Me */
+    .aboutMeInfoContainer{
         display: flex;
-        flex-direction: column;
-        
-        background-image: url(https://th.bing.com/th/id/OIP.EoxlNxDhP87FgN7XUpR-ZQHaEo?pid=ImgDet&rs=1);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .latestPostImgContainer{
-        display: none;
-    }
-    .latestPostTextAndButton{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .latestPostText{
-        width: 100%;
-    }
-
-
-
-    .blogsGrid{
-        width: 80%;
+        align-items: center;
+        justify-content: center;
         grid-template-columns: 1fr;
+        gap: 0;
+        place-content: center;
     }
+    .logoContainer{
+        position: absolute;
+        top: 150px;
+        opacity: .75;
+    }
+    .aboutMeInfo{
+        width: 80%;
+        z-index: 3;
+    }
+    .aboutMeInfo h1{
+        width: 100%;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+    .aboutMeInfo h1 a{
+        text-decoration: underline;
+    }
+    .aboutMeInfo p{
+        padding: 0 5px 0 5px;
+        color: white;
+        text-align: justify;
+        font-size: 16px;
+    }
+
 
 
 
@@ -370,8 +290,8 @@ footer{
         text-align: center;
     }
 }
-
 @media(max-width:500px) {
+
     /* Header */
     header{
         justify-content: center;
@@ -390,12 +310,44 @@ footer{
         gap: 10px;
         margin: 0;
     }
+    nav{
+        justify-content: center;
+    }
+    nav .navLogoContainer{
+        margin: 0;
+    }
 
-    /* Latest Post */
-    .latestPostInfo{
+
+    /* About Me */
+    .logoContainer{
+        opacity: .25;
+    }
+    .logoContainer img{
         width: 100%;
     }
-    .latestPost{
-        padding: 30px 10px 30px 10px;
+
+
+    /* FOOTER */
+    footer{
+        flex-direction: column;
+        padding: 0;
+    }
+    .footerIcons{
+        flex-direction: row;
+        gap: 5px;
+        padding: 15px 0 15px 0;
+    }
+    .footerInfo{
+        margin-top: 20px;
+        margin-left: 0;
+        width: 90%;
+    }
+    .footerInfo h2{
+        text-align: center;
+        padding: 0 0 10px;
+        margin: 0 0 10px 0;
+    }
+    .footerInfo p{
+        text-align: center;
     }
 }
