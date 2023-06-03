@@ -17,6 +17,7 @@ figure{
 }
 p{
     margin: 0;
+    color: white;
 }
 
 a{
@@ -177,6 +178,84 @@ nav .profileLink a{
     font-size: 16px;
 }
 
+
+
+
+
+/* Proyects */
+.proyectsContainer{
+    width: 100%;
+    padding: 10px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(215,91,120);
+    background: radial-gradient(circle, rgba(255,41,92,0.34217436974789917) 0%, rgba(106,0,212,0) 100%);
+}
+.proyectsGrid{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 80%;
+    margin-top: 20px;
+}
+.proyectCard{
+    width: 100%;
+    height: 475px;
+    background: var(--fondoContainer);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.proyectCard .proyectInfo{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.proyectCard .proyectInfo h1{
+    width: 100%;
+    text-align: center;
+}
+.proyectCard .proyectInfo h1 a{
+    text-decoration: underline;
+}
+.proyectCard .proyectInfo p{
+    width: 100%;
+    padding: 0 10px 0 10px;
+    text-align: justify;
+}
+.proyectCard figure{
+    width: 100%;
+    height: 475px;
+    position: absolute;
+    top: 0;
+    transition: .75s ease;
+}
+.proyectCard figure img{
+    width: 100%;
+    height: 475px;
+    object-fit: cover;
+    display: grid;
+    place-content: center;
+    z-index: 0;
+}
+.proyectCard figure:hover{
+    width: 110%;
+}
+.proyectCard .gradientCard{
+    width: 100%;
+    height: 475px;
+    position: absolute;
+    top: 0;
+    background: rgb(0,0,0);
+    opacity: .5;
+    z-index: 1;
+}
 
 
 
