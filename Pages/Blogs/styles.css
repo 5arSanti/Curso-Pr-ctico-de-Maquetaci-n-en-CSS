@@ -67,6 +67,18 @@ header .icons span {
     color: white;
     justify-self: end;
 }
+header .icons a{
+    width: 30px;
+    height: 30px;
+}
+header .icons img {
+    width: 30px;
+    height: 30px;
+    justify-self: end;
+    -webkit-filter: invert(1) hue-rotate(180deg) contrast(2);
+	filter: invert(1) hue-rotate(180deg) contrast(2); 
+}
+
 
 
 
@@ -343,53 +355,9 @@ footer{
         width: 80%;
         grid-template-columns: 1fr;
     }
-
-
-
-    /* FOOTER */
-    footer{
-        flex-direction: column;
-        padding: 0;
-    }
-    .footerIcons{
-        flex-direction: row;
-        gap: 15px;
-        padding: 15px 0 15px 0;
-    }
-    .footerInfo{
-        margin-top: 20px;
-        margin-left: 0;
-        width: 90%;
-    }
-    .footerInfo h2{
-        text-align: center;
-        padding: 0 0 10px;
-        margin: 0 0 10px 0;
-    }
-    .footerInfo p{
-        text-align: center;
-    }
 }
 
 @media(max-width:500px) {
-    /* Header */
-    header{
-        justify-content: center;
-    }
-    
-    header .headerIconsContainer{
-        width: 100%;
-        padding: 0;
-    
-    }
-    header .headerIconsContainer .icons{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        margin: 0;
-    }
 
     /* Latest Post */
     .latestPostInfo{

@@ -1,0 +1,60 @@
+@media(max-width: 913px){
+    footer{
+        flex-direction: column;
+        padding: 0;
+    }
+    .footerIcons{
+        flex-direction: row;
+        gap: 20px;
+        padding: 15px 0 15px 0;
+    }
+    .footerInfo{
+        margin-top: 20px;
+        margin-left: 0;
+        width: 90%;
+    }
+    .footerInfo h2{
+        text-align: center;
+        padding: 0 0 10px;
+        margin: 0 0 10px 0;
+    }
+    .footerInfo p{
+        text-align: center;
+    }    
+}
+
+@media(max-width:600px) {
+    h1{
+        font-size: 20px;
+    }
+    p{
+        font-size: 14px;
+    }
+    /* Header */
+    header{
+        justify-content: center;
+    }
+    
+    header .headerIconsContainer{
+        width: 100%;
+        padding: 0;
+    
+    }
+    header .headerIconsContainer .icons{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin: 0;
+    }
+    nav{
+        justify-content: center;
+    }
+    nav .profileLink{
+        margin: 0;
+    }
+    nav .navLogoContainer{
+        margin: 0;
+    }
+}
